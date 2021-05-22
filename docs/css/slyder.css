@@ -1,0 +1,46 @@
+
+
+/*image Slyder**/
+.slider {
+  opacity: 0.8;
+
+	width: 100%;
+  margin: auto;
+	overflow: hidden;/*hace que lo que se desborda de esconda*/
+}
+
+.slider ul {
+	display: flex;
+  
+	padding: 0;
+	width: 500%;/*nro de image * 100*/
+  margin-top: 0;
+
+	animation: cambio 25s infinite alternate linear;/*animacion completa 25seg*/
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	16% {margin-left: 0;}/*cambio de imagen cada 8seg transicion 2seg*/
+
+	20% {margin-left: -100%;}
+	36% {margin-left: -100%;}
+
+	40% {margin-left: -200%;}
+	56% {margin-left: -200%;}
+
+	60% {margin-left: -300%;}
+	76% {margin-left: -300%;}
+
+  80% {margin-left: -400%;}
+  100% {margin-left: -400%;}
+}

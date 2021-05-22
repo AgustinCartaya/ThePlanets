@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <title>Uranus</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cartaya Agustin"/>
+    <link href="css/commons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/planete.css" rel="stylesheet" type="text/css"/>
+    <link href="css/galery.css" rel="stylesheet" type="text/css"/>
+
+
+  </head>
+
+
+  <body onload="init(),initP()">
+
+    <div id="cNav"></div>
+
+    <input type="hidden" id="nPlanete" value="7">
+
+    <!-- image carrusel -->
+    <div id="planeteImage" class="flex flex-hbottom flex-wcenter">
+        <!--  <img src="images/img(1).png" alt=""> -->
+          <h1 id="titulo">Uranus</h1>
+          <ul id="planeteList" class="flex flex-hcenter">
+          </ul>
+
+    </div>
+
+
+        <!-- Parti centrel -->
+        <div class="container colorC">
+          <div class="contA">
+
+            <h2 class="tc">Information</h2>
+            <p>Uranus est principalement constitu&eacute;e d’hydrog&egrave;ne et l’h&eacute;lium, avec aussi un peu de m&eacute;thane et des traces d’autres compos&eacute;s.
+            Lors du survol de la sonde Voyager 2 en 1986, la plan&egrave;te apparaissait uniform&eacute;ment bleu vert, sans aucun d&eacute;tail visible. Du fait de sa masse, Uranus a moins d’&eacute;nergie interne &agrave; lib&eacute;rer que Jupiter et Saturne et la convection dans son atmosph&egrave;re est plus limit&eacute;e, d’où une absence de bandes et un aspect beaucoup plus homog&egrave;ne.
+            Notons n&eacute;anmoins que des observations plus r&eacute;centes par le t&eacute;lescope spatial ont r&eacute;v&eacute;l&eacute; une structure en bandes plus marqu&eacute;e, peut-être due &agrave; des changements climatiques au cours de la r&eacute;volution de la plan&egrave;te autour du Soleil.
+            La couleur bleu-vert d’Uranus provient du m&eacute;thane pr&eacute;sent dans la haute atmosph&egrave;re. Les rayons du Soleil sont r&eacute;fl&eacute;chis par les nuages les plus &eacute;lev&eacute;s de la plan&egrave;te mais doivent traverser la couche de m&eacute;thane qui se trouve au-dessus. Or le m&eacute;thane absorbe surtout la fraction rouge de la lumi&egrave;re solaire, et la portion bleue est donc la seule &agrave; pouvoir s’&eacute;chapper.
+            <a class="linkWiky colorC" href="https://fr.wikipedia.org/wiki/Uranus_(plan%C3%A8te)">Plus d'information, aller sur wikipedia en cliquant ici</a> </p>
+
+
+            <div class="contA">
+              <ul id="outils" class="flex flex-center">
+                <li  >  <img class=" icon hover-shadow cursor" id="img" src="images/img.png" alt="" onclick="openModal();currentSlide(1)" >  </li>
+                <li>  <img class="icon" id="vid" src="images/vid.png" alt="" onclick="change(1)">  </li>
+                <li>  <img class="icon" id="out" src="images/out.png" alt="" onclick="change(0)"> </li>
+              </ul>
+
+
+              <div id="videoContainer">
+                <h2>Video de Uranus</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eST9C7qS7fk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div id="outilContainer" class="hidden">
+                <h2>Outils</h2>
+                <form class="" action="index.html" method="post">
+                  <p>Page color</p>
+                  <input type="color" id="pageColor"  value="#000000" >
+                  <p>Lettre color</p>
+                  <input type="color" id="lettreColor"  value="#FFFFFF" >
+                  <p>Page font size</p>
+                  <input type="range" min="0" max="100" value="0" class="slider" id="lettreSize">
+                  <!--<input type="number" id="lettreSize"  value="1">-->
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(7).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(7).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(7).png" style="width:100%" alt = "">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <div id = "listImages" class="flex flex-center" >
+
+
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(7).png"  style="width:100%"  onclick="currentSlide(1)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(7).png"  style="width:100%"  onclick="currentSlide(2)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(7).png"  style="width:100%"  onclick="currentSlide(3)" alt="Image non disponible">
+                </div>
+
+            </div>
+          </div>
+
+          <div id="cFooter"></div>
+        </div>
+
+
+
+
+
+    <script src="js/galery.js">
+    </script>
+    <script src="js/planetes.js">
+    </script>
+    <script src="js/scripts.js">
+    </script>
+  </body>
+</html>

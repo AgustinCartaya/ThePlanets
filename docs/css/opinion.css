@@ -1,0 +1,78 @@
+
+
+#opinion{
+  padding: 50px 0px 0px 0;
+}
+
+#opinion h1 {
+color: white;
+}
+
+#opinion > form > fieldset{
+  margin: 0px 20%;
+  border: none;
+background-color: #919191;
+
+color: white;
+  border-radius: 8px 8px 8px 8px;
+-moz-border-radius: 8px 8px 8px 8px;
+-webkit-border-radius: 8px 8px 8px 8px;
+border: 0px solid #000000;
+
+
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(83,26,26,0.75);
+-moz-box-shadow:0px 0px 20px 2px rgba(83,26,26,0.75);
+box-shadow: 0px 0px 20px 2px rgba(83,260,260,0.75);
+
+}
+
+#opinion .table{
+    padding: 0px 25px;
+}
+
+
+#opinion label{
+  display: block;
+  margin-top: 20px;
+
+}
+
+#opinion textarea,
+#opinion input[type="text"],
+#opinion input[type="tel"],
+#opinion input[type="email"],
+#opinion input[type="reset"],
+#opinion input[type="submit"],
+#opinion select{
+  background:#333333;
+  border:0;
+  border-radius: 4px;
+  color: white;
+}
+
+#opinion input[type=submit]:disabled{
+  background:#666666;
+}
+
+#opinion input[type="text"],
+#opinion input[type="tel"],
+#opinion input[type="email"],
+#opinion select{
+width: 80%;
+height: 30px;
+
+}
+#opinion input:focus{
+border: 0;
+  background:#666666;
+}
+
+#opinion input[type="submit"],
+#opinion input[type="reset"]{
+  height: 40px;
+  margin-left: 15px;
+}
+
+#opinion #textPrivacite{
+  margin-top: 0;
+}

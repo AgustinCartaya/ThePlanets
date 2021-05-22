@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <title>Opinion</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cartaya Agustin"/>
+    <link href="css/stars.css" rel="stylesheet" type="text/css"/>
+    <link href="css/commons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/opinion.css" rel="stylesheet" type="text/css"/>
+  </head>
+
+
+  <body onload="init(), focusFormulaire()">
+
+
+
+    <!-- principal menu -->
+<div id="cNav"></div>
+
+
+        <!-- Parti centrel -->
+        <div class="stars">
+          <div class="twinkling">
+
+                <div id = "opinion">
+
+                    <h1 class="tc">Votre opinion</h1>
+
+                    <form class="" action="opinion.html" method="post" onsubmit="return fEnvoyer()">
+
+                      <fieldset>
+
+                        <div class="table w100">
+
+                          <div class="row">
+
+                            <div class="col">
+                            <label for="nom">Votre nom</label>
+                            <input type="text" id="nom" name="nom" placeholder="Exp: Alicup">
+                            </div>
+                            <div class="col">
+                            <label for="prenom">Votre prenom</label>
+                            <input type="text" id="prenom" name="prenom" placeholder="Exp: lisa">
+                            </div>
+
+                          </div>
+
+                          <div class="row">
+
+                            <div class="col">
+                            <label for="mail">Votre adresse mail</label>
+                            <input type="email" id="mail" name="mail" placeholder="Exp: tot@xxx.xxx">
+                            </div>
+                            <div class="col">
+                            <label for="tlf">Votre thelephone portable</label>
+                            <input id="tlf" name="tlf" type="tel" placeholder="Exp: 0x xx xx xx xx"
+                            pattern="0?[67][ -]?[0-9]{2}[ -]?[0-9]{2}[ -]?[0-9]{2}[ -]?[0-9]{2}">
+                            </div>
+
+                          </div>
+
+                          <div class="row">
+
+                          <div class="col">
+
+
+                            <fieldset class = "m0 p0 b0">
+
+                              <legend>Sexe</legend>
+
+                              <input type="radio" id="masculin" name="sexe" value="m" checked>M
+                              <input type="radio" id="femenin" name="sexe" value="f">F
+
+                            </fieldset>
+
+                          </div>
+
+                          <div class="col">
+
+                            <label for="pays">pays</label>
+
+                            <select class="" name="pays" id="pays">
+                            <option value="0">France</option>
+                            <option value="1">Venezuela</option>
+                            <option value="2">Chad</option>
+                            </select>
+
+                          </div>
+
+
+                        </div>
+
+                      </div>
+
+                      <div>
+                        <label for="textOpinion">Opinion</label>
+                        <textarea id="textOpinion" class="block w100" name="name" rows="8"></textarea>
+                      </div>
+
+                      <div class="mt10">
+                        <div class="fl">
+                          <input type="reset" id="effacer" name="effacer" value="Effacer" onclick="fEffacer()">
+                        </div>
+                        <div class="fr">
+                          <div class="flex flex-hcenter flex-wright ">
+                            <label for="privacite" id="textPrivacite"><a href="https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_fr.htm">Etes vous d'accor avec la privacit</a></label>
+                            <input type="checkbox" id="privacite" name="privacite" value="privacite">
+                            <input type="submit" id="envoyer"  name="envoyer" value="Envoyer" disabled  >
+                          </div>
+
+                        </div>
+
+
+                      </div>
+                    </fieldset>
+
+                  </form>
+
+
+                </div>
+
+
+  </div>
+
+
+        </div>
+
+        <audio controls autoplay>
+          <source src="musique/m(0).mp3" type="audio/mp3">
+            <source src="musique/m(0).ogg" type="audio/ogg">
+        </audio>
+        <!-- footer -->
+      <div id="cFooter"></div>
+
+    <script src="js/scripts.js">
+
+    </script>
+
+
+  </body>
+</html>

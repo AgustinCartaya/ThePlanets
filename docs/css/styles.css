@@ -1,0 +1,87 @@
+
+
+#titulo{
+position: absolute;
+width: 100%;
+top: 70px;
+text-shadow: 2px 2px #000000;
+color: lightgray;
+text-align: center;
+font-size: 6em;
+}
+/*Container*/
+
+.container{
+  top: 490px;
+}
+
+/*round menu**/
+
+.roundMenuA{
+
+  text-align: center;
+  display: inline-block;
+  margin: 0px 20px;
+  max-width: 200px;
+
+}
+
+.roundMenuA img{
+max-width: 180px;
+margin-right: 20px;
+}
+
+.roundMenuA img:hover{
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+/**Heure*/
+
+.contenedor {
+  position: absolute;
+  left: 10px;
+  width: 300px;
+  height: 90px;
+
+  margin: auto;
+}
+.widget {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.widget p {
+  display: inline-block;
+  color: white;
+margin: 0;
+}
+.fecha {
+  font-family: arial;
+  text-align: center;
+  margin-bottom: 5px;
+  background:  rgba(255,255,255,.4);
+  padding: 5px;
+  font-size: 1.2em;
+    border-radius: 4px;
+
+}
+.reloj {
+
+  padding: 5px;
+  text-align: center;
+  background: rgba(255,255,255,.4);
+    font-size: 1.5em;
+    border-radius: 4px;
+}
+.reloj .cajaSegundos {
+  display: inline-block;
+}

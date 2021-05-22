@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <title>Terre</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cartaya Agustin"/>
+    <link href="css/commons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/planete.css" rel="stylesheet" type="text/css"/>
+    <link href="css/galery.css" rel="stylesheet" type="text/css"/>
+
+
+  </head>
+
+
+  <body onload="init(),initP()">
+
+    <div id="cNav"></div>
+
+    <input type="hidden" id="nPlanete" value="3">
+
+    <!-- image carrusel -->
+    <div id="planeteImage" class="flex flex-hbottom flex-wcenter">
+        <!--  <img src="images/img(1).png" alt=""> -->
+          <h1 id="titulo">La Terre</h1>
+          <ul id="planeteList" class="flex flex-hcenter">
+          </ul>
+
+    </div>
+
+
+        <!-- Parti centrel -->
+        <div class="container colorC">
+          <div class="contA">
+
+            <h2 class="tc">Information</h2>
+            <p>Troisi&egrave;me plan&egrave;te du Syst&egrave;me solaire et cinqui&egrave;me plus grosse, la Terre est la seule plan&egrave;te connue sur laquelle se trouve des êtres vivants. La r&eacute;volution de la Terre autour du Soleil, qui d&eacute;finit l'ann&eacute;e sid&eacute;rale, dure 365 jours et 6 heures. La Terre accomplit une rotation sur elle-même en 23 heures et 56 minutes et 4,2 secondes (et non 24 heures), ce qui d&eacute;finit la dur&eacute;e d’un jour sid&eacute;ral. Mais, comme elle avance sur son orbite autour du Soleil de 1 degr&eacute; par jour, elle a effectivement besoin de 24 heures pour rattraper son <a class="linkWiky colorC" href="https://fr.vikidia.org/wiki/Terre">Plus d'information, aller sur wikipedia en cliquant ici</a> </p>
+
+
+            <div class="contA">
+              <ul id="outils" class="flex flex-center">
+                <li  >  <img class=" icon hover-shadow cursor" id="img" src="images/img.png" alt="" onclick="openModal();currentSlide(1)" >  </li>
+                <li>  <img class="icon" id="vid" src="images/vid.png" alt="" onclick="change(1)">  </li>
+                <li>  <img class="icon" id="out" src="images/out.png" alt="" onclick="change(0)"> </li>
+              </ul>
+
+
+              <div id="videoContainer">
+                <h2>Video de la Terre</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a6mylGSpU_c" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div id="outilContainer" class="hidden">
+                <h2>Outils</h2>
+                <form class="" action="index.html" method="post">
+                  <p>Page color</p>
+                  <input type="color" id="pageColor"  value="#000000" >
+                  <p>Lettre color</p>
+                  <input type="color" id="lettreColor"  value="#FFFFFF" >
+                  <p>Page font size</p>
+                  <input type="range" min="0" max="100" value="0" class="slider" id="lettreSize">
+                  <!--<input type="number" id="lettreSize"  value="1">-->
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(3).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(3).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(3).png" style="width:100%" alt = "">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <div id = "listImages" class="flex flex-center" >
+
+
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(3).png"  style="width:100%"  onclick="currentSlide(1)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(3).png"  style="width:100%"  onclick="currentSlide(2)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(3).png"  style="width:100%"  onclick="currentSlide(3)" alt="Image non disponible">
+                </div>
+
+            </div>
+          </div>
+
+          <div id="cFooter"></div>
+        </div>
+
+
+
+
+    <script src="js/galery.js">
+    </script>
+    <script src="js/planetes.js">
+    </script>
+    <script src="js/scripts.js">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <title>Neptune</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cartaya Agustin"/>
+    <link href="css/commons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/planete.css" rel="stylesheet" type="text/css"/>
+    <link href="css/galery.css" rel="stylesheet" type="text/css"/>
+
+
+  </head>
+
+
+  <body onload="init(),initP()">
+
+    <div id="cNav"></div>
+
+    <input type="hidden" id="nPlanete" value="8">
+
+    <!-- image carrusel -->
+    <div id="planeteImage" class="flex flex-hbottom flex-wcenter">
+        <!--  <img src="images/img(1).png" alt=""> -->
+          <h1 id="titulo">Neptune</h1>
+          <ul id="planeteList" class="flex flex-hcenter">
+          </ul>
+
+    </div>
+
+
+        <!-- Parti centrel -->
+        <div class="container colorC">
+          <div class="contA">
+
+            <h2 class="tc">Information</h2>
+            <p>La plan&egrave;te Neptune parcourt son orbite &agrave; 4,495 milliards de kilom&egrave;tres, soit 30 unit&eacute;s astronomiques du Soleil, ce qui en fait la plus lointaine des plan&egrave;tes du syst&egrave;me solaire (Pluton n’est plus en comp&eacute;tition depuis qu’elle a &eacute;t&eacute; r&eacute;trograd&eacute;e au rang de plan&egrave;te naine). Du fait de cette distance, la plan&egrave;te a une tr&egrave;s longue p&eacute;riode de r&eacute;volution : 165 ann&eacute;es terrestres.
+            Le diam&egrave;tre de Neptune est d’environ 49 500 kilom&egrave;tres, l&eacute;g&egrave;rement inf&eacute;rieur &agrave; celui d’Uranus, mais tout de même quatre fois celui de la Terre. Neptune a par contre une masse sup&eacute;rieure &agrave; Uranus, environ 17 fois la masse de la Terre.
+            <a class="linkWiky colorC" href="https://fr.wikipedia.org/wiki/Neptune_(plan%C3%A8te)">Plus d'information, aller sur wikipedia en cliquant ici</a> </p>
+
+
+            <div class="contA">
+              <ul id="outils" class="flex flex-center">
+                <li  >  <img class=" icon hover-shadow cursor" id="img" src="images/img.png" alt="" onclick="openModal();currentSlide(1)" >  </li>
+                <li>  <img class="icon" id="vid" src="images/vid.png" alt="" onclick="change(1)">  </li>
+                <li>  <img class="icon" id="out" src="images/out.png" alt="" onclick="change(0)"> </li>
+              </ul>
+
+
+              <div id="videoContainer">
+                <h2>Video de Neptune</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/faKnto4Pb6c" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div id="outilContainer" class="hidden">
+                <h2>Outils</h2>
+                <form class="" action="index.html" method="post">
+                  <p>Page color</p>
+                  <input type="color" id="pageColor"  value="#000000" >
+                  <p>Lettre color</p>
+                  <input type="color" id="lettreColor"  value="#FFFFFF" >
+                  <p>Page font size</p>
+                  <input type="range" min="0" max="100" value="0" class="slider" id="lettreSize">
+                  <!--<input type="number" id="lettreSize"  value="1">-->
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(8).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(8).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(8).png" style="width:100%" alt = "">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <div id = "listImages" class="flex flex-center" >
+
+
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(8).png"  style="width:100%"  onclick="currentSlide(1)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(8).png"  style="width:100%"  onclick="currentSlide(2)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(8).png"  style="width:100%"  onclick="currentSlide(3)" alt="Image non disponible">
+                </div>
+
+            </div>
+          </div>
+
+          <div id="cFooter"></div>
+        </div>
+
+
+
+
+
+    <script src="js/galery.js">
+    </script>
+    <script src="js/planetes.js">
+    </script>
+    <script src="js/scripts.js">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+iframe{
+  border: none;
+}
+/*NUEVO*/
+#planeteImage{
+
+  height: 450px;
+
+  background-image: url("../images/img(7).jpg");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+
+}
+
+#planeteImage #titulo{
+position: absolute;
+top:5%;
+text-shadow: 0px 2px #FFFFFF;
+text-align: center;
+font-size: 6em;
+}
+
+#planeteImage ul{
+
+  margin: 0px 0px 50px 0px;
+  padding: 0;
+
+}
+
+#planeteImage #nextP,
+#planeteImage #prevP{
+  margin:  0px 50px;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+
+}
+
+#planeteImage #nextP:hover,
+#planeteImage #prevP:hover{
+  font-size: 30px;
+}
+#planeteImage .minPlanete:hover{
+  opacity: 0.8;
+
+
+}
+
+
+#planeteImage  li{
+display: inline-block;
+padding: 3px;
+cursor: default;
+}
+#planeteImage img{
+
+  height: 70px;
+}
+#planeteImage .pCenter{
+
+  height: 200px;
+}
+
+
+.container{
+
+  top: 450px;
+
+}
+
+.linkWiky{
+text-decoration: underline;
+font-style: italic;
+}
+
+#outils{
+  margin: 0;
+  padding: 0;
+list-style-type: none;
+}
+
+.icon{
+  width: 60px;
+  opacity: 0.6;
+}
+.icon-selected,
+.icon:hover{
+opacity:1;
+}
+
+
+#outils li{
+
+  padding: 0px 5px;
+}

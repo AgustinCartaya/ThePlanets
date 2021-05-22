@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <title>Mars</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cartaya Agustin"/>
+    <link href="css/commons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/planete.css" rel="stylesheet" type="text/css"/>
+    <link href="css/galery.css" rel="stylesheet" type="text/css"/>
+
+
+  </head>
+
+
+  <body onload="init(),initP()">
+
+    <div id="cNav"></div>
+
+    <input type="hidden" id="nPlanete" value="4">
+
+    <!-- image carrusel -->
+    <div id="planeteImage" class="flex flex-hbottom flex-wcenter">
+        <!--  <img src="images/img(1).png" alt=""> -->
+          <h1 id="titulo">Mars</h1>
+          <ul id="planeteList" class="flex flex-hcenter">
+          </ul>
+
+    </div>
+
+
+        <!-- Parti centrel -->
+        <div class="container colorC">
+          <div class="contA">
+
+            <h2 class="tc">Information</h2>
+            <p>
+            Vue de la Terre, la plan&egrave;te apparaît g&eacute;n&eacute;ralement rougeâtre, avec quelques zones fonc&eacute;es et des r&eacute;gions polaires blanchâtres. Avec l’alternance des saisons, son aspect change beaucoup. En &eacute;t&eacute;, les zones polaires rapetissent et les zones fonc&eacute;es s’&eacute;tendent. En hiver, la couverture blanche sur les pôles est tr&egrave;s marqu&eacute;e et les zones fonc&eacute;es se font plus discr&egrave;tes.
+            Ces zones fonc&eacute;es sont des r&eacute;gions de roches plus sombres et leur changement d’aspect est probablement dû &agrave; une couche de poussi&egrave;re d’&eacute;paisseur variable avec les saisons. L’aspect rouge de la plan&egrave;te est quant &agrave; lui dû &agrave; la pr&eacute;sence d’oxyde de fer.
+               <a class="linkWiky colorC" href="https://fr.wikipedia.org/wiki/Mars_(plan%C3%A8te)">Plus d'information, aller sur wikipedia en cliquant ici</a> </p>
+
+
+            <div class="contA">
+              <ul id="outils" class="flex flex-center">
+                <li  >  <img class=" icon hover-shadow cursor" id="img" src="images/img.png" alt="" onclick="openModal();currentSlide(1)" >  </li>
+                <li>  <img class="icon" id="vid" src="images/vid.png" alt="" onclick="change(1)">  </li>
+                <li>  <img class="icon" id="out" src="images/out.png" alt="" onclick="change(0)"> </li>
+              </ul>
+
+
+              <div id="videoContainer">
+                <h2>Video de Mars</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o-NGSw7lgso"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div id="outilContainer" class="hidden">
+                <h2>Outils</h2>
+                <form class="" action="index.html" method="post">
+                  <p>Page color</p>
+                  <input type="color" id="pageColor"  value="#000000" >
+                  <p>Lettre color</p>
+                  <input type="color" id="lettreColor"  value="#FFFFFF" >
+                  <p>Page font size</p>
+                  <input type="range" min="0" max="100" value="0" class="slider" id="lettreSize">
+                  <!--<input type="number" id="lettreSize"  value="1">-->
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(4).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(4).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(4).png" style="width:100%" alt = "">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <div id = "listImages" class="flex flex-center" >
+
+
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(4).png"  style="width:100%"  onclick="currentSlide(1)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(4).png"  style="width:100%"  onclick="currentSlide(2)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(4).png"  style="width:100%"  onclick="currentSlide(3)" alt="Image non disponible">
+                </div>
+
+            </div>
+          </div>
+
+          <div id="cFooter"></div>
+        </div>
+
+
+
+
+
+    <script src="js/galery.js">
+    </script>
+    <script src="js/planetes.js">
+    </script>
+    <script src="js/scripts.js">
+    </script>
+  </body>
+</html>

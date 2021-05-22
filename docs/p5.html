@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <title>Jupiter</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cartaya Agustin"/>
+    <link href="css/commons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/planete.css" rel="stylesheet" type="text/css"/>
+    <link href="css/galery.css" rel="stylesheet" type="text/css"/>
+
+
+  </head>
+
+
+  <body onload="init(),initP()">
+
+    <div id="cNav"></div>
+
+    <input type="hidden" id="nPlanete" value="5">
+
+    <!-- image carrusel -->
+    <div id="planeteImage" class="flex flex-hbottom flex-wcenter">
+        <!--  <img src="images/img(1).png" alt=""> -->
+          <h1 id="titulo">Jupiter</h1>
+          <ul id="planeteList" class="flex flex-hcenter">
+          </ul>
+
+    </div>
+
+
+        <!-- Parti centrel -->
+        <div class="container colorC">
+          <div class="contA">
+
+            <h2 class="tc">Information</h2>
+            <p>A 5,2 unit&eacute;s astronomiques du Soleil, soit 775 millions de kilom&egrave;tres, nous rencontrons Jupiter, dont le diam&egrave;tre &eacute;quatorial est d’environ 143 000 kilom&egrave;tres, soit 11 fois celui de la Terre.
+            Avec une masse proche de 320 fois celle de notre plan&egrave;te, Jupiter est deux fois plus massive que toutes les autres plan&egrave;tes du syst&egrave;me solaire r&eacute;unies. Sa densit&eacute; moyenne est d’environ 1,3 fois la densit&eacute; de l’eau, ce qui est &agrave; comparer avec la densit&eacute; moyenne de la Terre : 5,5 fois celle de l’eau. Cette faible valeur fut interpr&eacute;t&eacute;e d&egrave;s les ann&eacute;es 1930 comme une pr&eacute;pond&eacute;rance des deux &eacute;l&eacute;ments les plus l&eacute;gers, hydrog&egrave;ne et h&eacute;lium.
+            Jupiter est l’un des objets les plus int&eacute;ressants du ciel nocturne. Même un petit t&eacute;lescope r&eacute;v&egrave;le un disque d&eacute;coup&eacute; par plusieurs bandes parall&egrave;les alternativement claires et sombres. D’autres d&eacute;tails apparaissent : une &eacute;norme r&eacute;gion ovale et rouge, d&eacute;j&agrave; observ&eacute;e au XVIIe si&egrave;cle, et de nombreuses petites r&eacute;gions ovales blanches ou brunes.
+            Une autre caract&eacute;ristique de Jupiter est son fort aplatissement dû &agrave; une vitesse de rotation vertigineuse. La plan&egrave;te effectue en effet un tour sur elle-même en moins de 10 heures, ce qui est prodigieux &eacute;tant donn&eacute; son gabarit.</p>
+            <h2>La structure interne de Jupiter</h2>
+            <p>
+            La structure interne de Jupiter a &eacute;t&eacute; d&eacute;termin&eacute;e grâce &agrave; diff&eacute;rents types d’observations. La façon dont la plan&egrave;te est d&eacute;form&eacute;e par sa rotation a permis de d&eacute;terminer qu’au centre se trouve un noyau rocheux d’environ 10 000 kilom&egrave;tres de rayon.
+            Apr&egrave;s le noyau apparaît une couche d’hydrog&egrave;ne liquide de 40 000 kilom&egrave;tres d’&eacute;paisseur qui a la particularit&eacute; d’être m&eacute;tallique. Sous l’effet d’une pression &eacute;norme – plus de 3 millions de fois la pression atmosph&eacute;rique terrestre – les &eacute;lectrons ne sont plus li&eacute;s aux noyaux et peuvent se d&eacute;placer librement. Ils peuvent ainsi transporter la chaleur et l’&eacute;lectricit&eacute; et engendrer un champ magn&eacute;tique. En un mot, l’hydrog&egrave;ne liquide s’y comporte comme un m&eacute;tal.
+            Au-dessus, se trouve une autre couche de 20 000 kilom&egrave;tres d’&eacute;paisseur compos&eacute;e d’hydrog&egrave;ne mol&eacute;culaire liquide qui n’est plus m&eacute;tallique.
+            Enfin, vers la surface, on trouve une tr&egrave;s mince couche d’hydrog&egrave;ne mol&eacute;culaire gazeux &eacute;paisse d’environ 1000 kilom&egrave;tres.
+            </p>
+            <h2>L’&eacute;nergie interne de Jupiter</h2>
+            <p>
+            En &eacute;tudiant le rayonnement provenant de Jupiter, les plan&eacute;tologues se sont rendu compte d’un ph&eacute;nom&egrave;ne curieux : la plan&egrave;te &eacute;met 1,5 fois plus d’&eacute;nergie qu’elle n’en reçoit. Cette propri&eacute;t&eacute; explique pourquoi la temp&eacute;rature augmente lorsque l’on p&eacute;n&egrave;tre dans l’atmosph&egrave;re et est responsable de la r&eacute;partition des couches nuageuses. Le ph&eacute;nom&egrave;ne s’explique probablement par le fait que Jupiter est encore en train de lib&eacute;rer l’&eacute;nergie accumul&eacute;e lors de sa formation.</p>
+            <a class="linkWiky colorC" href="https://fr.wikipedia.org/wiki/Jupiter_(plan%C3%A8te)">Plus d'information, aller sur wikipedia en cliquant ici</a>
+
+
+            <div class="contA">
+              <ul id="outils" class="flex flex-center">
+                <li  >  <img class=" icon hover-shadow cursor" id="img" src="images/img.png" alt="" onclick="openModal();currentSlide(1)" >  </li>
+                <li>  <img class="icon" id="vid" src="images/vid.png" alt="" onclick="change(1)">  </li>
+                <li>  <img class="icon" id="out" src="images/out.png" alt="" onclick="change(0)"> </li>
+              </ul>
+
+
+              <div id="videoContainer">
+                <h2>Video de Jupiter</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LG5jUYmaFsk"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div id="outilContainer" class="hidden">
+                <h2>Outils</h2>
+                <form class="" action="index.html" method="post">
+                  <p>Page color</p>
+                  <input type="color" id="pageColor"  value="#000000" >
+                  <p>Lettre color</p>
+                  <input type="color" id="lettreColor"  value="#FFFFFF" >
+                  <p>Page font size</p>
+                  <input type="range" min="0" max="100" value="0" class="slider" id="lettreSize">
+                  <!--<input type="number" id="lettreSize"  value="1">-->
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(5).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(5).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(5).png" style="width:100%" alt = "">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <div id = "listImages" class="flex flex-center" >
+
+
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(5).png"  style="width:100%"  onclick="currentSlide(1)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(5).png"  style="width:100%"  onclick="currentSlide(2)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(5).png"  style="width:100%"  onclick="currentSlide(3)" alt="Image non disponible">
+                </div>
+
+            </div>
+          </div>
+
+          <div id="cFooter"></div>
+        </div>
+
+
+
+
+
+    <script src="js/galery.js">
+    </script>
+    <script src="js/planetes.js">
+    </script>
+    <script src="js/scripts.js">
+    </script>
+  </body>
+</html>

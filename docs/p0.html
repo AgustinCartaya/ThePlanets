@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <title>Soleil</title>
+    <meta charset="UTF-8">
+    	<meta name="author" content="Cartaya AGustin"/>
+    <link href="css/commons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/planete.css" rel="stylesheet" type="text/css"/>
+    <link href="css/galery.css" rel="stylesheet" type="text/css"/>
+
+
+  </head>
+
+
+  <body onload="init(),initP()">
+
+    <div id="cNav"></div>
+
+    <input type="hidden" id="nPlanete" value="0">
+
+    <!-- image carrusel -->
+    <div id="planeteImage" class="flex flex-hbottom flex-wcenter">
+        <!--  <img src="images/img(1).png" alt=""> -->
+          <h1 id="titulo">Soleil</h1>
+          <ul id="planeteList" class="flex flex-hcenter">
+          </ul>
+
+    </div>
+
+
+        <!-- Parti centrel -->
+        <div class="container colorC">
+          <div class="contA">
+
+            <h2 class="tc">Information</h2>
+            <p>Le Soleil est l’Le Soleil est l’&eacute;toile du Syst&egrave;me solaire. Dans la classification astronomique, c’est une &eacute;toile de type naine jaune d'une masse d'environ 1,9891 × 1030 kg, compos&eacute;e d’hydrog&egrave;ne (75 % de la masse ou 92 % du volume) et d’h&eacute;lium (25 % de la masse ou 8 % du volume)9. Le Soleil fait partie de la galaxie appel&eacute;e la Voie lact&eacute;e et se situe &agrave; environ 8 kpc (∼26 100 a.l.) du centre galactique, dans le bras d'Orion. Le Soleil orbite autour du centre galactique en 225 &agrave; 250 millions d'ann&eacute;es (ann&eacute;e galactique). Autour de lui gravitent la Terre (&agrave; la vitesse de 30 km/s), sept autres plan&egrave;tes, au moins cinq plan&egrave;tes naines, de tr&egrave;s nombreux ast&eacute;roïdes et com&egrave;tes et une bande de poussi&egrave;re. Le Soleil repr&eacute;sente &agrave; lui seul environ 99,854 % de la masse du Syst&egrave;me solaire ainsi constitu&eacute;, Jupiter repr&eacute;sentant plus des deux tiers du reste.toile du Syst&egrave;me solaire. Dans la classification astronomique, c’est une &eacute;toile de type naine jaune d'une masse d'environ 1,9891 × 1030 kg, compos&eacute;e d’hydrog&egrave;ne (75 % de la masse ou 92 % du volume) et d’h&eacute;lium (25 % de la masse ou 8 % du volume)9. Le Soleil fait partie de la galaxie appel&eacute;e la Voie lact&eacute;e et se situe &agrave; environ 8 kpc (∼26 100 a.l.) du centre galactique, dans le bras d'Orion. Le Soleil orbite autour du centre galactique en 225 &agrave; 250 millions d'ann&eacute;es (ann&eacute;e galactique). Autour de lui gravitent la Terre (&agrave; la vitesse de 30 km/s), sept autres plan&egrave;tes, au moins cinq plan&egrave;tes naines, de tr&egrave;s nombreux ast&eacute;roïdes et com&egrave;tes et une bande de poussi&egrave;re. Le Soleil repr&eacute;sente &agrave; lui seul environ 99,854 % de la masse du Syst&egrave;me solaire ainsi constitu&eacute;, Jupiter repr&eacute;sentant plus des deux tiers du reste.
+               <a class="linkWiky colorC" href="https://fr.wikipedia.org/wiki/Soleil">Plus d'information, aller sur wikipedia en cliquant ici</a> </p>
+
+
+            <div class="contA">
+              <ul id="outils" class="flex flex-center">
+                <li  >  <img class=" icon hover-shadow cursor" id="img" src="images/img.png" alt="" onclick="openModal();currentSlide(1)" >  </li>
+                <li>  <img class="icon" id="vid" src="images/vid.png" alt="" onclick="change(1)">  </li>
+                <li>  <img class="icon" id="out" src="images/out.png" alt="" onclick="change(0)"> </li>
+              </ul>
+
+
+              <div id="videoContainer">
+                <h2>Video du Soleil</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TOYGhaf8c24"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div id="outilContainer" class="hidden">
+                <h2>Outils</h2>
+                <form class="" action="index.html" method="post">
+                  <p>Page color</p>
+                  <input type="color" id="pageColor"  value="#000000" >
+                  <p>Lettre color</p>
+                  <input type="color" id="lettreColor"  value="#FFFFFF" >
+                  <p>Page font size</p>
+                  <input type="range" min="0" max="100" value="0" class="slider" id="lettreSize">
+                  <!--<input type="number" id="lettreSize"  value="1">-->
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(0).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(0).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(0).png" style="width:100%" alt = "">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <div id = "listImages" class="flex flex-center" >
+
+
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(0).png"  style="width:100%"  onclick="currentSlide(1)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(0).png"  style="width:100%"  onclick="currentSlide(2)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(0).png"  style="width:100%"  onclick="currentSlide(3)" alt="Image non disponible">
+                </div>
+
+            </div>
+          </div>
+
+          <div id="cFooter"></div>
+        </div>
+
+
+
+
+
+
+    <script src="js/planetes.js">
+    </script>
+    <script src="js/scripts.js">
+    </script>
+    <script src="js/galery.js">
+    </script>
+  </body>
+</html>

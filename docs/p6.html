@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <title>Saturne</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cartaya Agustin"/>
+    <link href="css/commons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/planete.css" rel="stylesheet" type="text/css"/>
+    <link href="css/galery.css" rel="stylesheet" type="text/css"/>
+
+
+  </head>
+
+
+  <body onload="init(),initP()">
+
+    <div id="cNav"></div>
+
+    <input type="hidden" id="nPlanete" value="6">
+
+    <!-- image carrusel -->
+    <div id="planeteImage" class="flex flex-hbottom flex-wcenter">
+        <!--  <img src="images/img(1).png" alt=""> -->
+          <h1 id="titulo">Saturne</h1>
+          <ul id="planeteList" class="flex flex-hcenter">
+          </ul>
+
+    </div>
+
+
+        <!-- Parti centrel -->
+        <div class="container colorC">
+          <div class="contA">
+
+            <h2 class="tc">Information</h2>
+            <p>Saturne orbite autour du Soleil &agrave; une distance moyenne de 9,5 unit&eacute;s astronomiques, soit 1,4 milliards de kilom&egrave;tres. Deuxi&egrave;me plan&egrave;te par la taille avec un diam&egrave;tre de 121 000 kilom&egrave;tres, elle est surtout connue pour ses magnifiques anneaux.
+            Tout comme Jupiter, elle tourne tr&egrave;s vite sur elle-même, en une dizaine d’heures, et est essentiellement constitu&eacute;e d’hydrog&egrave;ne et d’h&eacute;lium, comme le prouve sa tr&egrave;s faible densit&eacute; de seulement 0,69 fois celle de l’eau.
+            La plan&egrave;te a &eacute;t&eacute; &eacute;tudi&eacute;e en d&eacute;tail par quatre sondes : Pioneer 11 en 1979, Voyager 1 en 1980, Voyager 2 en 1981 et surtout Cassini-Huygens entre 2004 et 2017.
+            Celles-ci ont r&eacute;v&eacute;l&eacute; la complexit&eacute; des anneaux et ont apport&eacute; des images &agrave; haute r&eacute;solution de la surface visible de Saturne. Cette derni&egrave;re s’est r&eacute;v&eacute;l&eacute;e beaucoup moins color&eacute;e que celle de Jupiter, avec n&eacute;anmoins des bandes jaunâtres parall&egrave;les &agrave; l’&eacute;quateur et quelques taches blanches.
+            <a class="linkWiky colorC" href="https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)">Plus d'information, aller sur wikipedia en cliquant ici</a> </p>
+
+
+            <div class="contA">
+              <ul id="outils" class="flex flex-center">
+                <li  >  <img class=" icon hover-shadow cursor" id="img" src="images/img.png" alt="" onclick="openModal();currentSlide(1)" >  </li>
+                <li>  <img class="icon" id="vid" src="images/vid.png" alt="" onclick="change(1)">  </li>
+                <li>  <img class="icon" id="out" src="images/out.png" alt="" onclick="change(0)"> </li>
+              </ul>
+
+
+              <div id="videoContainer">
+                <h2>Video de Saturne</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iriWV6r77Sw"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div id="outilContainer" class="hidden">
+                <h2>Outils</h2>
+                <form class="" action="index.html" method="post">
+                  <p>Page color</p>
+                  <input type="color" id="pageColor"  value="#000000" >
+                  <p>Lettre color</p>
+                  <input type="color" id="lettreColor"  value="#FFFFFF" >
+                  <p>Page font size</p>
+                  <input type="range" min="0" max="100" value="0" class="slider" id="lettreSize">
+                  <!--<input type="number" id="lettreSize"  value="1">-->
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(6).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(6).png" style="width:100%" alt = "">
+              </div>
+
+              <div class="mySlides">
+                <img class = "img1" src="images/p(6).png" style="width:100%" alt = "">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <div id = "listImages" class="flex flex-center" >
+
+
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(6).png"  style="width:100%"  onclick="currentSlide(1)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(6).png"  style="width:100%"  onclick="currentSlide(2)" alt="Image non disponible">
+                </div>
+                <div class="column">
+                  <img class="demo cursor img2" src="images/p(6).png"  style="width:100%"  onclick="currentSlide(3)" alt="Image non disponible">
+                </div>
+
+            </div>
+          </div>
+
+          <div id="cFooter"></div>
+        </div>
+
+
+
+
+
+    <script src="js/galery.js">
+    </script>
+    <script src="js/planetes.js">
+    </script>
+    <script src="js/scripts.js">
+    </script>
+  </body>
+</html>
